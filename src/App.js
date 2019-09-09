@@ -1,29 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Users from './Users'
+import HomePage from './HomePage';
+import SignUpPage from './SignUpPage';
+import LoginPage from './LoginPage';
 
-function App() {
-  return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-    <div>
-      <p>ChatApp ready to go</p>
-    </div>
-  );
+import { Switch, Route} from 'react-router-dom'
+
+
+class App extends React.Component{
+
+state = {
+  users: [],
+  chatPerson: {}
+}
+
+componentDidMount() {
+  fetch("http://localhost:3000/users")
+    .then(res => res.json())
+    .then(users => this.setState({ users }))
+}
+
+chatWithThisUser = (user) => {
+  this.setState({chatPerson: user})
+}
+
+render(){
+  console.log(this.state.chatPerson)
+    return (
+      <Switch>
+        <Route path={'/signup'} component={SignUpPage} />
+        <Route path={'/login'} component={LoginPage} />
+        <Route path={'/'} component={HomePage}/>
+      </Switch>
+    )
+
+
+
+
+
+
+
+  }
 }
 
 export default App;
