@@ -9,11 +9,13 @@ users = () => {
        key={user.id}
        user={user}
        chatWithThisUser={this.props.chatWithThisUser}
+       chatid={this.props.chatid}
      />
    )
 }
 
 render(){
+  console.log(localStorage.name)
     return (
       <div>
       <p>Logged in as: {localStorage.name}</p>
