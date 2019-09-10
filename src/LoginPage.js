@@ -19,11 +19,11 @@ class LoginPage extends Component {
       if (currentUser.length === 0){
         console.log("it doesnt exit");
       }
-      else(
-        this.props.history.push('/HomePage')
+      else{
+        this.props.history.push('/users')
         localStorage.name = currentUser.name
-        localStorage.id = currentUser.id 
-      )
+        localStorage.id = currentUser.id
+      }
     })
   }
 
