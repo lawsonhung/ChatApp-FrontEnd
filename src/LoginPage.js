@@ -21,6 +21,7 @@ class LoginPage extends Component {
       }
       else{
         this.props.history.push('/users')
+        console.log(currentUser.name)
         localStorage.name = currentUser.name
         localStorage.id = currentUser.id
       }

@@ -15,6 +15,7 @@ state = {
   users: [],
   chatPerson: {},
   chatroomExists: false,
+  chatid: null
 }
 
 componentDidMount() {
@@ -38,6 +39,9 @@ toggleChatRoom = () => {
     )
   }
 }
+chatid = (id) => {
+  this.setState({chatid: id})
+}
 
 render(){
 
@@ -49,8 +53,11 @@ render(){
           <Route path={'/users'}
           render = {routerProps =>
             <div>
-              <Users {...routerProps} users={this.state.users} chatWithThisUser={this.chatWithThisUser} />
-              <Messages {...routerProps} chatPerson={this.state.chatPerson} />
+              <Users {...routerProps} users={this.state.users}
+               chatWithThisUser={this.chatWithThisUser}
+               chatid={this.chatid} />
+
+              <Messages {...routerProps} chatPerson={this.state.chatPerson} chatid={this.state.chatid}/>
               {this.toggleChatRoom()}
             </div>
             }
