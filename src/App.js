@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import SignUpPage from './SignUpPage';
 import LoginPage from './LoginPage';
 import Messages from './Messages';
+import Chatroom from './Chatroom'
 
 import { Switch, Route} from 'react-router-dom'
 
@@ -12,7 +13,8 @@ class App extends React.Component{
 
 state = {
   users: [],
-  chatPerson: {}
+  chatPerson: {},
+  chatroomExists: false,
 }
 
 componentDidMount() {
@@ -22,11 +24,27 @@ componentDidMount() {
 }
 
 chatWithThisUser = (user) => {
-  this.setState({chatPerson: user})
+  this.setState(
+    {chatPerson: user, chatroomExists: true},
+    () => {
+      console.log(`Logged in as ${localStorage.name}, and chatting with: `, this.state.chatPerson)
+
+    }
+  )
+}
+
+toggleChatRoom = () => {
+  if (this.state.chatroomExists) {
+    return(
+      <div>
+        <Chatroom chatWithUser={this.props.user} />
+      </div>
+    )
+  }
 }
 
 render(){
-  console.log(this.state.chatPerson)
+
     return (
       <Switch>
         <Route path={'/signup'} component={SignUpPage} />
@@ -37,6 +55,7 @@ render(){
             <div>
               <Users {...routerProps} users={this.state.users} chatWithThisUser={this.chatWithThisUser} />
               <Messages {...routerProps} chatPerson={this.state.chatPerson} />
+              {this.toggleChatRoom()}
             </div>
             }
             />
