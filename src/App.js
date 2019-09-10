@@ -3,6 +3,7 @@ import Users from './Users'
 import HomePage from './HomePage';
 import SignUpPage from './SignUpPage';
 import LoginPage from './LoginPage';
+import Messages from './Messages';
 
 import { Switch, Route} from 'react-router-dom'
 
@@ -25,11 +26,22 @@ chatWithThisUser = (user) => {
 }
 
 render(){
-  console.log(this.state.chatPerson)
     return (
       <Switch>
         <Route path={'/signup'} component={SignUpPage} />
         <Route path={'/login'} component={LoginPage} />
+        {localStorage.id ?
+          <Route path={'/users'}
+          render = {routerProps =>
+            <div>
+              <Users {...routerProps} users={this.state.users} chatWithThisUser={this.chatWithThisUser} />
+              <Messages {...routerProps} chatPerson={this.state.chatPerson} />
+            </div>
+            }
+          />
+          :
+          <Route path={'/'} component={HomePage}/>
+        }
         <Route path={'/'} component={HomePage}/>
       </Switch>
     )

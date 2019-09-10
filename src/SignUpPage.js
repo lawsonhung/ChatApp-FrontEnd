@@ -27,7 +27,7 @@ class SignUpPage extends Component {
       .then(res => res.json())
       .then(user => {
         console.log(user)
-        this.props.history.push('/HomePage')
+        this.props.history.push('/users')
         localStorage.name = user.name
         localStorage.id = user.id
       })

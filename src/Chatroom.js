@@ -1,7 +1,7 @@
 import React from 'react';
 import User from './user'
 
-class Users extends React.Component{
+class Chatroom extends React.Component{
 
 users = () => {
     return this.props.users.map(user =>
@@ -25,4 +25,4 @@ render(){
 
 }
 
-export default Users;
+export default Chatroom;
