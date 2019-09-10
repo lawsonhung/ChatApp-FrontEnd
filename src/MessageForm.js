@@ -19,7 +19,7 @@ handleMessageSubmit = () => {
   body: JSON.stringify({
     user_id: localStorage.id,
     message: this.state.message,
-    chat_id: 
+    chat_id:
   })
   )
 }

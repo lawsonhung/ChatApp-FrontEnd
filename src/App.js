@@ -12,7 +12,8 @@ class App extends React.Component{
 
 state = {
   users: [],
-  chatPerson: {}
+  chatPerson: {},
+  chatid: null
 }
 
 componentDidMount() {
@@ -24,9 +25,11 @@ componentDidMount() {
 chatWithThisUser = (user) => {
   this.setState({chatPerson: user})
 }
+chatid = (id) => {
+  this.setState({chatid: id})
+}
 
 render(){
-  console.log(this.state.chatPerson)
     return (
       <Switch>
         <Route path={'/signup'} component={SignUpPage} />
@@ -35,7 +38,10 @@ render(){
           <Route path={'/users'}
           render = {routerProps =>
             <div>
-              <Users {...routerProps} users={this.state.users} chatWithThisUser={this.chatWithThisUser} />
+              <Users {...routerProps} users={this.state.users}
+               chatWithThisUser={this.chatWithThisUser}
+               chatid={this.chatid} />
+
               <Messages {...routerProps} chatPerson={this.state.chatPerson} />
             </div>
             }
