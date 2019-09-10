@@ -15,7 +15,10 @@ class LoginPage extends Component {
     fetch('http://localhost:3000/users')
     .then(res=>res.json())
     .then(users=> {
-      let currentUser = users.filter(user => user.name === this.state.username)
+      // Changed from filter to find due to undefined showing up if multiple instances with same username
+      // Returns first instance found
+      let currentUser = users.find(user => user.name === this.state.username)
+      console.log("CurrentUser after filtering: ", currentUser)
       if (currentUser.length === 0){
         console.log("it doesnt exit");
       }

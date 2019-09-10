@@ -15,10 +15,11 @@ users = () => {
 }
 
 render(){
-  
+  // console.log("this.props: ", this.props);
+
     return (
       <div>
-      <p>Logged in as: {localStorage.name}</p>
+        <p>Logged in as: {localStorage.name}</p>
         {this.users()}
       </div>
     )

@@ -1,5 +1,4 @@
 import React from 'react';
-
 class MessageForm extends React.Component{
 state = {
   message: ""
