@@ -25,11 +25,7 @@ componentDidMount() {
 
 chatWithThisUser = (user) => {
   this.setState(
-    {chatPerson: user, chatroomExists: true},
-    () => {
-      console.log(`Logged in as ${localStorage.name}, and chatting with: `, this.state.chatPerson)
-
-    }
+    {chatPerson: user, chatroomExists: true}
   )
 }
 

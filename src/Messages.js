@@ -26,7 +26,6 @@ class Messages extends React.Component{
 
 
 
-
   render(){
     // console.log(this.state.chatPeople);
       // let abc ;
@@ -36,7 +35,7 @@ class Messages extends React.Component{
       // console.log(abc)
     return (
       <div>
-        {this.props.chatPerson.name}
+        <p>Start talking to {this.props.chatPerson.name}!</p>
       </div>
     )
   }
