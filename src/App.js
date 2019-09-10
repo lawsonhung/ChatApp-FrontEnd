@@ -42,7 +42,9 @@ render(){
                chatWithThisUser={this.chatWithThisUser}
                chatid={this.chatid} />
 
-              <Messages {...routerProps} chatPerson={this.state.chatPerson} />
+              <Messages {...routerProps}
+               chatPerson={this.state.chatPerson}
+               chatid={this.state.chatid}/>
             </div>
             }
             />
