@@ -26,6 +26,7 @@ chatWithThisUser = (user) => {
 }
 
 render(){
+  console.log(this.state.chatPerson)
     return (
       <Switch>
         <Route path={'/signup'} component={SignUpPage} />
@@ -38,7 +39,7 @@ render(){
               <Messages {...routerProps} chatPerson={this.state.chatPerson} />
             </div>
             }
-          />
+            />
           :
           <Route path={'/'} component={HomePage}/>
         }
