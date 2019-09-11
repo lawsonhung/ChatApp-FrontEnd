@@ -3,7 +3,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  color: white;
+  color: #FFFFFF;
   font-family: "Lucida Sans Unicode", sans-serif;
 }
 
@@ -24,9 +24,10 @@ body {
 .registration:hover {
   cursor: default;
 }
+
 .registrationForm {
   text-align: center;
-  background-color: transparent;
+ background-color: transparent;
 }
 
 .linkUL {
@@ -68,10 +69,8 @@ input:hover, button {
   margin: 1em;
 }
 
-input:hover, button {
-}
 
-input:hover {
+input:hover, button {
   cursor: pointer;
 }
 
@@ -94,7 +93,6 @@ input:hover {
   transform: rotateY(30deg);
 }
 
-
 .user {
   background-color: #00CB00
   color: #FFFFFF;
@@ -112,6 +110,12 @@ input:hover {
   display: flex;
   padding: 1em 0.5em 1em 0.5em;
   margin: 1em 0.5em 1em 1em;
+  background-color: red;
+  color: #FFFFFF;
+}
+
+.logoutButton:hover {
+  cursor: pointer;
 }
 
 .allUsers {
@@ -150,9 +154,8 @@ input:hover {
   margin-top: 1em;
   border-radius: 25px;
   text-shadow: 1px 1px 1px #000000;
-  opacity: 0.9;
   box-shadow: 8px 8px 8px #000000;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .chatroom input:not([type="submit"]) {
@@ -177,6 +180,10 @@ input:hover {
 .submit {
   display: inline;
   padding: 0.5em 1em 0.5em 0.5em;
+
+.submit:hover {
+  background-color: #00CB00;
+  transition: 0.4s;
 }
 
 
