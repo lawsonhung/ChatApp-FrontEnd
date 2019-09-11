@@ -56,9 +56,9 @@ render(){
   const {name , online_status} = this.props.user
     return (
     <div>
-      <div className="AllUsers" >
-        <p>Name: {name}</p>
-        <p>Online Status: {online_status? "online" : "offline"}</p>
+      <div className="user" >
+        <div>Name: {name}</div>
+        <div>Online status?: {online_status ? "online" : "offline"}</div>
       </div>
 
       <div className="OnlineUsers">

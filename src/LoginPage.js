@@ -44,9 +44,10 @@ class LoginPage extends Component {
   render() {
     return (
       <div>
-        <h1>Log in please!</h1>
+        <h1 className="registration">Log in please!</h1>
         <form onSubmit={this.handleLoginSubmit}>
           <input onChange={this.handleChange} value={this.state.username} type="text" name="username"/>
+          {"\n"}
           <input type="submit" value="Log in"/>
         </form>
       </div>

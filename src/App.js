@@ -19,6 +19,7 @@ state = {
 }
 
 componentDidMount() {
+
   setInterval(()=>{
     fetch("https://lets-chat-flatiron.herokuapp.com/users")
     .then(res => res.json())
