@@ -12,7 +12,7 @@ class LoginPage extends Component {
   handleLoginSubmit = (e) => {
     e.preventDefault()
 
-    fetch('http://localhost:3000/users')
+    fetch('https://lets-chat-flatiron.herokuapp.com/users')
     .then(res=>res.json())
     .then(users=> {
       let currentUser = users.filter(user => user.name === this.state.username)
@@ -21,7 +21,7 @@ class LoginPage extends Component {
       }
       else{
         this.props.history.push('/users')
-        console.log(currentUser[0].name)  
+        console.log(currentUser[0].name)
         localStorage.name = currentUser[0].name
         localStorage.id = currentUser[0].id
       }

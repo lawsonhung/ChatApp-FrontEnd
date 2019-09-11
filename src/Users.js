@@ -13,10 +13,16 @@ users = () => {
      />
    )
 }
+logout = () => {
+  localStorage.name = null
+  localStorage.id = null
+  this.props.history.push('/')
+}
 
 render(){
     return (
       <div>
+      <button onClick={this.logout}>Log Out</button>
       <p>Logged in as: {localStorage.name}</p>
         {this.users()}
       </div>

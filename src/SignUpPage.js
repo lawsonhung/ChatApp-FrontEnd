@@ -13,7 +13,7 @@ class SignUpPage extends Component {
     e.preventDefault()
     console.log(this.state.username)
 
-    fetch('http://localhost:3000/users', {
+    fetch('https://lets-chat-flatiron.herokuapp.com/users', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
