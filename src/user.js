@@ -2,20 +2,23 @@ import React from 'react';
 
 class User extends React.Component{
   state={
-    chatPeople: "",
+    // chatPeople: "",
+    chatPeople: [],
     chat_id: 0
   }
 
   sendChatInfo = () => {
 
       if (this.props.user.name){
-      let chatPeople = [localStorage.name,this.props.user.name].join("/")
+      let chatPeople = [localStorage.name,this.props.user.name].sort().join()
+
         this.setState({chatPeople})
+        console.log(chatPeople)
       }
       fetch("http://localhost:3000/chats")
       .then(res=> res.json())
       .then(data => {
-      let abc = data.filter(user => user.name.toLowerCase() === this.state.chatPeople.toLowerCase())
+      let abc = data.filter(user => user.name === this.state.chatPeople)
       if (abc.length === 0 ){
         fetch("http://localhost:3000/chats",{
           method: 'POST',
@@ -39,7 +42,7 @@ class User extends React.Component{
         this.props.chatid(abc[0].id)
       }
 
-      })
+    })
   }
 
 

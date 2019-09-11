@@ -15,7 +15,6 @@ users = () => {
 }
 
 render(){
-  console.log(localStorage.name)
     return (
       <div>
       <p>Logged in as: {localStorage.name}</p>

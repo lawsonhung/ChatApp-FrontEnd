@@ -13,20 +13,44 @@ class App extends React.Component{
 state = {
   users: [],
   chatPerson: {},
-  chatid: null
+  chatid: null,
+  allmessages: [],
+  userMessages: []
 }
 
 componentDidMount() {
   fetch("http://localhost:3000/users")
     .then(res => res.json())
     .then(users => this.setState({ users }))
-}
+
+   setInterval(()=>{
+     fetch("http://localhost:3000/chat_boxes")
+     .then(res=> res.json())
+     .then(allmessages => {this.setState({ allmessages }) })
+   }, 1000)
+    }
 
 chatWithThisUser = (user) => {
   this.setState({chatPerson: user})
 }
+
 chatid = (id) => {
   this.setState({chatid: id})
+  console.log(id);
+  console.log(this.state.chatPerson.id)
+  setInterval(()=>{
+  this.setState({userMessages: []})
+    this.state.allmessages.map(message => {
+      if(
+        (message.user_id === parseInt(localStorage.id) && id === message.chat_id)
+        ||
+        (message.user_id === this.state.chatPerson.id && id === message.chat_id)
+      )
+      {
+        this.setState({ userMessages: [...this.state.userMessages , message]})
+      }
+    })
+  } , 1000)
 }
 
 render(){
@@ -44,7 +68,8 @@ render(){
 
               <Messages {...routerProps}
                chatPerson={this.state.chatPerson}
-               chatid={this.state.chatid}/>
+               chatid={this.state.chatid}
+               messages={this.state.userMessages}/>
             </div>
             }
             />
