@@ -26,7 +26,7 @@ body {
 }
 .registrationForm {
   text-align: center;
-  background-color: blue;
+  background-color: transparent;
 }
 
 .linkUL {
@@ -185,42 +185,6 @@ input:hover {
 
 /*************** Each Message start *******************/
 
-/*
-    .receiver {
-      width: 120px;
-      height: 80px;
-      background: yellow;
-      position: relative;
-      -moz-border-radius: 10px;
-      -webkit-border-radius: 10px;
-      border-radius: 10px;
-    }
-    .receiver:before {
-      content: "";
-      position: absolute;
-      right: 100%;
-      top: 26px;
-      width: 0;
-      height: 0;
-      border-top: 7px solid transparent;
-      border-right: 26px solid red;
-      border-bottom: 7px solid transparent;
-    } */
-/* .sender {
-  text-align: right;
-
-} */
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -295,22 +259,75 @@ input:hover {
 
 
 
-input[type=text] {
-    padding:5px;
-    border:2px solid #ccc;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+
+/* .message-form-div{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ font-family: Montserrat;
+ background: #fff1f0;
+} */
+
+.message-form-div{
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ margin-top: 50px;
+ font-family: Montserrat;
+
 }
 
-input[type=text]:focus {
-    border-color:#333;
-}
+ input[type="text"]{
+ align-items: center;
+ display: inline-block;
+ width: 500px;
+ height: 40px;
+ box-sizing: border-box;
+ outline: none;
+ border: 1px solid lightgray;
+ border-radius: 3px;
+ padding: 10px 10px 10px 100px;
+ transition: all 0.1s ease-out;
+ }
 
-input[type=submit] {
-    padding:5px 15px;
-    background:#ccc;
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-}
+ input[type="text"] + label{
+ position: absolute;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ height: 40px;
+ line-height: 40px;
+ color: white;
+ border-radius: 3px 0 0 3px;
+ padding: 0 20px;
+ background: #fa8072;
+ transform: translateZ(0) translateX(0);
+ transition: all 0.3s ease-in;
+ transition-delay: 0.2s;
+ }
+
+ input[type="text"]:focus + label{
+ transform: translateY(-120%) translateX(0%);
+ border-radius: 3px;
+ transition: all 0.1s ease-out;
+ }
+
+ input[type="text"]:focus{
+ padding: 10px;
+ transition: all 0.3s ease-out;
+ transition-delay: 0.2s;
+ }
+
+ input[type="submit"] {
+   border:2px solid yellow;
+   padding:5px 20px;
+   font-size:30px;
+   background:repeating-linear-gradient(to right,yellow 0,white 4px,transparent 4px, transparent 8px) center/0px 100%  no-repeat;
+   transition:0.5s all linear;
+ }
+ input[type="submit"]:hover {
+   background-size:100% 100%;
+ }
