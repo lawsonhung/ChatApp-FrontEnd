@@ -55,10 +55,18 @@ class User extends React.Component{
 render(){
   const {name , online_status} = this.props.user
     return (
-      <div onClick={this.sendUserInfo}>
+    <div>
+      <div className="AllUsers" >
         <p>Name: {name}</p>
         <p>Online Status: {online_status? "online" : "offline"}</p>
       </div>
+
+      <div className="OnlineUsers">
+          {online_status?
+            <div onClick={this.sendUserInfo} > Name: {name} is online ........ </div>: null
+          }
+      </div>
+    </div>
     )
   }
 
