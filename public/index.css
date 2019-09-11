@@ -112,6 +112,10 @@ input:hover {
   color: #FFFFFF;
 }
 
+.logoutButton:hover {
+  cursor: pointer;
+}
+
 .allUsers {
   display: flex;
 }
@@ -149,7 +153,7 @@ input:hover {
   border-radius: 25px;
   text-shadow: 1px 1px 1px #000000;
   box-shadow: 8px 8px 8px #000000;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .chatroom input:not([type="submit"]) {
@@ -174,6 +178,11 @@ input:hover {
 .submit {
   display: inline;
   padding: 0.5em 1em 0.5em 0.5em;
+}
+
+.submit:hover {
+  background-color: #00CB00;
+  transition: 0.4s;
 }
 
 /*************** Chatroom End *******************/
