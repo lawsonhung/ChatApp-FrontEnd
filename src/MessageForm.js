@@ -11,7 +11,7 @@ handleMessageChange = (e) => {
 
 handleMessageSubmit = (e) => {
   e.preventDefault()
-
+  e.target.reset()
   console.log("localStorage.id: ", localStorage.id);
   console.log("this.state.message: ", this.state.message);
   console.log("this.props.chatID: ", this.props.chatid);
@@ -35,7 +35,7 @@ render(){
       <div>
         <form onSubmit={this.handleMessageSubmit}>
           <input onChange={this.handleMessageChange} type="text" name="new message"/>
-          <input type="submit" value="Send"/>
+          <input type="submit" value="Send" className="submit"/>
         </form>
       </div>
     )

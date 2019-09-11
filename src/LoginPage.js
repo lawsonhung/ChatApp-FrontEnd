@@ -18,16 +18,23 @@ class LoginPage extends Component {
       // Changed from filter to find due to undefined showing up if multiple instances with same username
       // Returns first instance found
       let currentUser = users.find(user => user.name === this.state.username)
-      console.log("CurrentUser after filtering: ", currentUser)
+      console.log(currentUser)
+      console.log(!!currentUser)
+      if (!!currentUser){
       if (currentUser.length === 0){
         console.log("it doesnt exit");
       }
       else{
         this.props.history.push('/users')
 
-        console.log(currentUser[0].name)
-        localStorage.name = currentUser[0].name
-        localStorage.id = currentUser[0].id
+        if(Array.isArray(localStorage)){
+          localStorage.name = currentUser[0].name
+          localStorage.id = currentUser[0].id
+        }
+        else{
+          localStorage.name = currentUser.name
+          localStorage.id = currentUser.id
+        }
         fetch(`https://lets-chat-flatiron.herokuapp.com/users/${localStorage.id}`,{
           method: 'PATCH',
           headers: {
@@ -39,6 +46,10 @@ class LoginPage extends Component {
             })
           })
       }
+    }
+    else(
+      this.props.history.push('/HomePage')
+    )
     })
 
   }
@@ -49,7 +60,7 @@ class LoginPage extends Component {
     return (
       <div>
         <h1 className="registration">Log in please!</h1>
-        <form onSubmit={this.handleLoginSubmit}>
+        <form onSubmit={this.handleLoginSubmit} className="registrationForm" >
           <input onChange={this.handleChange} value={this.state.username} type="text" name="username"/>
           {"\n"}
           <input type="submit" value="Log in"/>

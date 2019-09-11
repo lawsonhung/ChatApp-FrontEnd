@@ -4,7 +4,6 @@ import HomePage from './HomePage';
 import SignUpPage from './SignUpPage';
 import LoginPage from './LoginPage';
 import Messages from './Messages';
-import Chatroom from './Chatroom'
 
 import { Switch, Route} from 'react-router-dom'
 
@@ -35,7 +34,6 @@ componentDidMount() {
 
 chatWithThisUser = (user) => {
   this.setState({chatPerson: user})
-  // this.setState({userMessages: []})
 }
 
 chatid = (id) => {
@@ -51,14 +49,15 @@ chatid = (id) => {
         (message.user_id === this.state.chatPerson.id && id === message.chat_id)
       )
       {
+        console.log(message.chat_id)
         this.setState({ userMessages: [...this.state.userMessages , message]})
       }
     })
   } , 1000)
+
 }
 
 render(){
-
     return (
       <Switch>
         <Route path={'/signup'} component={SignUpPage} />

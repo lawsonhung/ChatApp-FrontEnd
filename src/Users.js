@@ -31,10 +31,11 @@ logout = () => {
 
 render(){
     return (
-      <div>
-      <button onClick={this.logout}>Log Out</button>
-      <p>Logged in as: {localStorage.name}</p>
-        {this.users()}
+      <div className="allUsers">
+        <div className="user" >Logged in as: {localStorage.name}
+          <button onClick={this.logout} className="logoutButton">Log Out</button>
+        </div>
+          {this.users()}
       </div>
     )
   }

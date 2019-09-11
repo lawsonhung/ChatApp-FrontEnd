@@ -66,6 +66,13 @@ input, button {
 }
 
 input:hover, button {
+  margin: 1em;
+}
+
+input:hover, button {
+}
+
+input:hover {
   cursor: pointer;
 }
 
@@ -106,6 +113,7 @@ input:hover, button {
   display: flex;
   padding: 1em 0.5em 1em 0.5em;
   margin: 1em 0.5em 1em 1em;
+  background-color: orange;
 }
 
 .allUsers {
@@ -138,7 +146,7 @@ input:hover, button {
 /*************** Chatroom *******************/
 
 .chatroom {
-  background-color: #00CB00;
+  background-color: transparent;
   padding: 0.5em;
   border: 2px solid #FFFFFF;
   margin-top: 1em;
@@ -160,11 +168,79 @@ input:hover, button {
   padding: 0.5em 1em 0.5em 0.5em;
 }
 
-.chatroom input {
+.chatroom input:not([type="submit"]) {
   margin: 0.5em;
   display: inline;
-  padding: 0.5em;
   text-align: left;
+  padding: 0.5em 50em 0.5em 1em;
 }
 
+.submit {
+  display: inline;
+  padding: 0.5em 1em 0.5em 0.5em;
+}
+
+
 /*************** Chatroom End *******************/
+
+
+/*************** Each Message start *******************/
+
+.message-sender-receiver {
+	font-family: "Helvetica Neue";
+	font-size: 20px;
+	font-weight: normal;
+  max-width: 70vw;
+	margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sender-receiver{
+  max-width: 70vw;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+  position: relative;
+	padding: 0.25em;
+  border-radius: 25px;
+
+}
+
+.sender {
+	color:white;
+	background:#0B93F6;
+	align-self: flex-end;
+  border-radius: 25px;
+  box-shadow: 8px 8px 8px #000000;
+}
+.receiver {
+	background:#E5E5EA;
+	color:black;
+  border-radius: 25px;
+  box-shadow: 8px 8px 8px #000000;
+}
+
+
+/*************** EachMessage Ends ************/
+
+
+input[type=text] {
+    padding:5px;
+    border:2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}

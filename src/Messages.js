@@ -3,6 +3,7 @@ import MessageForm from './MessageForm'
 import EachMessage from './EachMessage'
 
 class Messages extends React.Component{
+
 renderMessage = () => {
   return this.props.messages.map(mes => <EachMessage
     message={mes}
