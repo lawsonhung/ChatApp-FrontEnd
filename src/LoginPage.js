@@ -18,16 +18,20 @@ class LoginPage extends Component {
       // Changed from filter to find due to undefined showing up if multiple instances with same username
       // Returns first instance found
       let currentUser = users.find(user => user.name === this.state.username)
-      console.log("CurrentUser after filtering: ", currentUser)
       if (currentUser.length === 0){
         console.log("it doesnt exit");
       }
       else{
         this.props.history.push('/users')
 
-        console.log(currentUser.name)
-        localStorage.name = currentUser.name
-        localStorage.id = currentUser.id
+        if(Array.isArray(localStorage)){
+          localStorage.name = currentUser[0].name
+          localStorage.id = currentUser[0].id
+        }
+        else{
+          localStorage.name = currentUser.name
+          localStorage.id = currentUser.id
+        }
         fetch(`https://lets-chat-flatiron.herokuapp.com/users/${localStorage.id}`,{
           method: 'PATCH',
           headers: {

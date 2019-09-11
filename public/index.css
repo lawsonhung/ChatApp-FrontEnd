@@ -25,11 +25,20 @@ body {
   cursor: default;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 .registrationForm {
   text-align: center;
   background-color: blue;
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 .linkUL {
   padding: 0;
 }
@@ -56,16 +65,37 @@ body {
 
 /************** Login and Signup Pages ******************/
 
+<<<<<<< HEAD
 input, button {
+=======
+<<<<<<< HEAD
+input, button {
+=======
+input {
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
   border-radius: 25px;
   border: 1px solid #000000;
   box-shadow: 8px 8px 8px #000000;
   display: flex;
   text-align: center;
+<<<<<<< HEAD
   margin: 1em;
 }
 
 input:hover, button {
+=======
+<<<<<<< HEAD
+  margin: 1em;
+}
+
+input:hover, button {
+=======
+}
+
+input:hover {
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
   cursor: pointer;
 }
 
@@ -73,6 +103,10 @@ input:hover, button {
 
 /*************** Users Pages *******************/
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 .flipCard {
   border: 1px solid #f1f1f1;
   perspective: 1000px;
@@ -89,8 +123,17 @@ input:hover, button {
 }
 
 
+<<<<<<< HEAD
 .user {
   background-color: #808080;
+=======
+.user {
+  background-color: #808080;
+=======
+.user {
+  background-color: #00CB00;
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
   color: #FFFFFF;
   margin: 0 0.2em 0 0.2em;
   border: 2px solid #FFFFFF;
@@ -98,6 +141,10 @@ input:hover, button {
   text-align: center;
   text-shadow: 1px 1px 1px #000000;
   padding: 1em 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
   box-shadow: 8px 8px 8px #000000;
   opacity: 0.8;
 }
@@ -106,6 +153,11 @@ input:hover, button {
   display: flex;
   padding: 1em 0.5em 1em 0.5em;
   margin: 1em 0.5em 1em 1em;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 }
 
 .allUsers {
@@ -118,6 +170,10 @@ input:hover, button {
 
 /*************** Users Pages End *******************/
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 /************** Online Users *****************/
 
 .onlineUsers {
@@ -135,6 +191,11 @@ input:hover, button {
 
 /************** Online Users *****************/
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 /*************** Chatroom *******************/
 
 .chatroom {
@@ -144,6 +205,11 @@ input:hover, button {
   margin-top: 1em;
   border-radius: 25px;
   text-shadow: 1px 1px 1px #000000;
+<<<<<<< HEAD
+  box-shadow: 8px 8px 8px #000000;
+  opacity: 0.9;
+=======
+<<<<<<< HEAD
   box-shadow: 8px 8px 8px #000000;
   opacity: 0.9;
 }
@@ -158,6 +224,24 @@ input:hover, button {
 .submit {
   display: inline;
   padding: 0.5em 1em 0.5em 0.5em;
+=======
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
+}
+
+.chatroom input:not([type="submit"]) {
+  margin: 0.5em;
+  display: inline;
+  text-align: left;
+<<<<<<< HEAD
+  padding: 0.5em 50em 0.5em 1em;
+}
+
+.submit {
+  display: inline;
+  padding: 0.5em 1em 0.5em 0.5em;
+=======
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
+>>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 }
 
 /*************** Chatroom End *******************/
