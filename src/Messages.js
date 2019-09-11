@@ -11,7 +11,7 @@ renderMessage = () => {
     />)
 }
 
-render(){
+  render(){
     return (
       <div className="chatroom" >
         You are chatting with: {this.props.chatPerson.name}
@@ -20,7 +20,6 @@ render(){
       </div>
     )
   }
-
 
 }
 
