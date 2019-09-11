@@ -49,6 +49,7 @@ chatid = (id) => {
         (message.user_id === this.state.chatPerson.id && id === message.chat_id)
       )
       {
+        console.log(message.chat_id)
         this.setState({ userMessages: [...this.state.userMessages , message]})
       }
     })

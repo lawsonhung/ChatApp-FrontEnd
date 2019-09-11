@@ -27,6 +27,7 @@ body {
 
 .registrationForm {
   text-align: center;
+ background-color: transparent;
 }
 
 .linkUL {
@@ -68,7 +69,8 @@ input:hover, button {
   margin: 1em;
 }
 
-input:hover {
+
+input:hover, button {
   cursor: pointer;
 }
 
@@ -92,7 +94,7 @@ input:hover {
 }
 
 .user {
-  /* background-color: #696969; */
+  background-color: #00CB00
   color: #FFFFFF;
   margin: 0 0.2em 0 0.2em;
   border: 2px solid #FFFFFF;
@@ -146,7 +148,7 @@ input:hover {
 /*************** Chatroom *******************/
 
 .chatroom {
-  background-color: #00CB00;
+  background-color: transparent;
   padding: 0.5em;
   border: 2px solid #FFFFFF;
   margin-top: 1em;
@@ -178,11 +180,161 @@ input:hover {
 .submit {
   display: inline;
   padding: 0.5em 1em 0.5em 0.5em;
-}
 
 .submit:hover {
   background-color: #00CB00;
   transition: 0.4s;
 }
 
+
 /*************** Chatroom End *******************/
+
+
+/*************** Each Message start *******************/
+
+
+
+
+.message-sender-receiver {
+	font-family: "Helvetica Neue";
+	font-size: 20px;
+	font-weight: normal;
+  max-width: 450px;
+	margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sender-receiver{
+  max-width: 255px;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+  position:relative;
+	padding:10px 20px;
+  border-radius:25px;
+
+  &:before, &:after {
+    content:"";
+		position:absolute;
+    bottom:-2px;
+    height:20px;
+  }
+}
+
+.sender {
+	color:white;
+	background:#0B93F6;
+	align-self: flex-end;
+
+	&:before {
+		right:-7px;
+		border-right:20px solid #0B93F6;
+		border-bottom-left-radius: 16px 14px;
+		transform:translate(0, -2px);
+	}
+
+	&:after {
+		right:-56px;
+		width:26px;
+		background:white;
+		border-bottom-left-radius: 10px;
+		transform:translate(-30px, -2px);
+	}
+}
+.receiver {
+	background:#E5E5EA;
+	color:black;
+
+	&:before {
+		left:-7px;
+		border-left:20px solid #E5E5EA;
+		border-bottom-right-radius: 16px 14px;
+		transform:translate(0, -2px);
+	}
+
+	&:after {
+		left:4px;
+		width:26px;
+		background:white;
+		border-bottom-right-radius: 10px;
+		transform:translate(-30px, -2px);
+	}
+}
+
+
+
+
+
+
+/* .message-form-div{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ font-family: Montserrat;
+ background: #fff1f0;
+} */
+
+.message-form-div{
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ margin-top: 50px;
+ font-family: Montserrat;
+
+}
+
+ input[type="text"]{
+ align-items: center;
+ display: inline-block;
+ width: 500px;
+ height: 40px;
+ box-sizing: border-box;
+ outline: none;
+ border: 1px solid lightgray;
+ border-radius: 3px;
+ padding: 10px 10px 10px 100px;
+ transition: all 0.1s ease-out;
+ }
+
+ input[type="text"] + label{
+ position: absolute;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ height: 40px;
+ line-height: 40px;
+ color: white;
+ border-radius: 3px 0 0 3px;
+ padding: 0 20px;
+ background: #fa8072;
+ transform: translateZ(0) translateX(0);
+ transition: all 0.3s ease-in;
+ transition-delay: 0.2s;
+ }
+
+ input[type="text"]:focus + label{
+ transform: translateY(-120%) translateX(0%);
+ border-radius: 3px;
+ transition: all 0.1s ease-out;
+ }
+
+ input[type="text"]:focus{
+ padding: 10px;
+ transition: all 0.3s ease-out;
+ transition-delay: 0.2s;
+ }
+
+ input[type="submit"] {
+   border:2px solid yellow;
+   padding:5px 20px;
+   font-size:30px;
+   background:repeating-linear-gradient(to right,yellow 0,white 4px,transparent 4px, transparent 8px) center/0px 100%  no-repeat;
+   transition:0.5s all linear;
+ }
+ input[type="submit"]:hover {
+   background-size:100% 100%;
+ }
