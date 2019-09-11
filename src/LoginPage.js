@@ -24,8 +24,19 @@ class LoginPage extends Component {
         console.log(currentUser[0].name)
         localStorage.name = currentUser[0].name
         localStorage.id = currentUser[0].id
+        fetch(`https://lets-chat-flatiron.herokuapp.com/users/${localStorage.id}`,{
+          method: 'PATCH',
+          headers: {
+            'Content-Type': "application/json",
+            'Accept': 'application/json'
+          },
+            body:JSON.stringify({
+            online_status: true
+            })
+          })
       }
     })
+
   }
 
 
