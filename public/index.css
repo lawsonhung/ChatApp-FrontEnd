@@ -25,6 +25,11 @@ body {
   cursor: default;
 }
 
+.registrationForm {
+  text-align: center;
+  background-color: blue;
+}
+
 .linkUL {
   padding: 0;
 }
@@ -51,15 +56,16 @@ body {
 
 /************** Login and Signup Pages ******************/
 
-input {
+input, button {
   border-radius: 25px;
   border: 1px solid #000000;
   box-shadow: 8px 8px 8px #000000;
   display: flex;
   text-align: center;
+  margin: 1em;
 }
 
-input:hover {
+input:hover, button {
   cursor: pointer;
 }
 
@@ -67,8 +73,24 @@ input:hover {
 
 /*************** Users Pages *******************/
 
+.flipCard {
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flipCardInner {
+  text-align: center;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCardInner {
+  transform: rotateY(30deg);
+}
+
+
 .user {
-  background-color: #00CB00;
+  background-color: #808080;
   color: #FFFFFF;
   margin: 0 0.2em 0 0.2em;
   border: 2px solid #FFFFFF;
@@ -76,6 +98,14 @@ input:hover {
   text-align: center;
   text-shadow: 1px 1px 1px #000000;
   padding: 1em 0;
+  box-shadow: 8px 8px 8px #000000;
+  opacity: 0.8;
+}
+
+.logoutButton {
+  display: flex;
+  padding: 1em 0.5em 1em 0.5em;
+  margin: 1em 0.5em 1em 1em;
 }
 
 .allUsers {
@@ -88,6 +118,23 @@ input:hover {
 
 /*************** Users Pages End *******************/
 
+/************** Online Users *****************/
+
+.onlineUsers {
+  background-color: #00CB00;
+  color: #FFFFFF;
+  margin: 0 0.2em 0 0.2em;
+  border: 2px solid #FFFFFF;
+  border-radius: 25px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000000;
+  padding: 1em 0;
+  box-shadow: 8px 8px 8px #000000;
+  opacity: 0.8;
+}
+
+/************** Online Users *****************/
+
 /*************** Chatroom *******************/
 
 .chatroom {
@@ -97,13 +144,20 @@ input:hover {
   margin-top: 1em;
   border-radius: 25px;
   text-shadow: 1px 1px 1px #000000;
+  box-shadow: 8px 8px 8px #000000;
+  opacity: 0.9;
 }
 
-.chatroom input {
+.chatroom input:not([type="submit"]) {
   margin: 0.5em;
   display: inline;
-  padding: 0.5em 10em 0.5em 0;
   text-align: left;
+  padding: 0.5em 50em 0.5em 1em;
+}
+
+.submit {
+  display: inline;
+  padding: 0.5em 1em 0.5em 0.5em;
 }
 
 /*************** Chatroom End *******************/

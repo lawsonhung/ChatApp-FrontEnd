@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import SignUpPage from './SignUpPage';
 import LoginPage from './LoginPage';
 import Messages from './Messages';
+import Chatroom from './Chatroom'
 
 import { Switch, Route} from 'react-router-dom'
 
@@ -19,9 +20,11 @@ state = {
 }
 
 componentDidMount() {
-  fetch("https://lets-chat-flatiron.herokuapp.com/users")
+  setInterval(()=>{
+    fetch("https://lets-chat-flatiron.herokuapp.com/users")
     .then(res => res.json())
     .then(users => this.setState({ users }))
+  }, 1000)
 
    setInterval(()=>{
      fetch("https://lets-chat-flatiron.herokuapp.com/chat_boxes")
@@ -32,6 +35,7 @@ componentDidMount() {
 
 chatWithThisUser = (user) => {
   this.setState({chatPerson: user})
+  // this.setState({userMessages: []})
 }
 
 chatid = (id) => {
@@ -40,7 +44,7 @@ chatid = (id) => {
   console.log(this.state.chatPerson.id)
   setInterval(()=>{
   this.setState({userMessages: []})
-    this.state.allmessages.map(message => {
+  this.state.allmessages.map(message => {
       if(
         (message.user_id === parseInt(localStorage.id) && id === message.chat_id)
         ||
@@ -54,6 +58,7 @@ chatid = (id) => {
 }
 
 render(){
+
     return (
       <Switch>
         <Route path={'/signup'} component={SignUpPage} />

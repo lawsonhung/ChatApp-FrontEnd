@@ -13,11 +13,28 @@ users = () => {
      />
    )
 }
+logout = () => {
+  fetch(`https://lets-chat-flatiron.herokuapp.com/users/${localStorage.id}`,{
+    method: 'PATCH',
+    headers: {
+      'Content-Type': "application/json",
+      'Accept': 'application/json'
+    },
+    body:JSON.stringify({
+      online_status: false
+    })
+  })
+    localStorage.name = null
+    localStorage.id = null
+  this.props.history.push('/')
+}
 
 render(){
     return (
       <div className="allUsers">
-        <div className="user" >Logged in as: {localStorage.name}</div>
+        <div className="user" >Logged in as: {localStorage.name}
+          <button onClick={this.logout} className="logoutButton">Log Out</button>
+        </div>
           {this.users()}
       </div>
     )
