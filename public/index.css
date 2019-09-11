@@ -180,6 +180,7 @@ input:hover, button {
 .submit {
   display: inline;
   padding: 0.5em 1em 0.5em 0.5em;
+}
 
 .submit:hover {
   background-color: #00CB00;
@@ -214,14 +215,15 @@ input:hover, button {
 }
 
 .sender {
-	color:white;
-	background:#0B93F6;
+	color: white;
+	background: #0B93F6;
 	align-self: flex-end;
   border-radius: 25px;
   box-shadow: 8px 8px 8px #000000;
 }
+
 .receiver {
-	background:#E5E5EA;
+	background: #E5E5EA;
 	color:black;
   border-radius: 25px;
   box-shadow: 8px 8px 8px #000000;
@@ -249,7 +251,6 @@ input:hover, button {
  position: relative;
  margin-top: 50px;
  font-family: Montserrat;
-
 }
 
  input[type="text"]{
@@ -297,7 +298,7 @@ input:hover, button {
    border:2px solid yellow;
    padding:5px 20px;
    font-size:30px;
-   background:repeating-linear-gradient(to right,yellow 0,white 4px,transparent 4px, transparent 8px) center/0px 100%  no-repeat;
+   background:repeating-linear-gradient(to right,#0B93F6 0,#E5E5EA 4px,transparent 4px, transparent 8px) center/0px 100%  no-repeat;
    transition:0.5s all linear;
  }
  input[type="submit"]:hover {
