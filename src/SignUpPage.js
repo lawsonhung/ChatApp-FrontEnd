@@ -13,7 +13,7 @@ class SignUpPage extends Component {
     e.preventDefault()
     console.log(this.state.username)
 
-    fetch('http://localhost:3000/users', {
+    fetch('https://lets-chat-flatiron.herokuapp.com/users', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +38,7 @@ class SignUpPage extends Component {
   render() {
     return (
       <div>
-        <h1>Make an account!</h1>
+        <h1 className="registration" >Make an account!</h1>
         <form onSubmit={this.handleSignupSubmit}>
           <input onChange={this.handleChange} value={this.state.username} type="text" name="username"/>
           <input type="submit" value="Sign up!"/>

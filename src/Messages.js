@@ -13,8 +13,8 @@ renderMessage = () => {
 
 render(){
     return (
-      <div >
-        you are chating with:{this.props.chatPerson.name}
+      <div className="chatroom" >
+        You are chatting with: {this.props.chatPerson.name}
         {this.renderMessage()}
         <MessageForm chatid = {this.props.chatid}/>
       </div>

@@ -19,12 +19,12 @@ state = {
 }
 
 componentDidMount() {
-  fetch("http://localhost:3000/users")
+  fetch("https://lets-chat-flatiron.herokuapp.com/users")
     .then(res => res.json())
     .then(users => this.setState({ users }))
 
    setInterval(()=>{
-     fetch("http://localhost:3000/chat_boxes")
+     fetch("https://lets-chat-flatiron.herokuapp.com/chat_boxes")
      .then(res=> res.json())
      .then(allmessages => {this.setState({ allmessages }) })
    }, 1000)

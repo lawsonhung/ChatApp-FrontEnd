@@ -15,7 +15,7 @@ handleMessageSubmit = (e) => {
   console.log("this.state.message: ", this.state.message);
   console.log("this.props.chatID: ", this.props.chatid);
 
-  fetch('http://localhost:3000/chat_boxes', {
+  fetch('https://lets-chat-flatiron.herokuapp.com/chat_boxes', {
     method: "POST",
     headers: {
       'Content-Type': "application/json",

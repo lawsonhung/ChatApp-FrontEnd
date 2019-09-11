@@ -15,12 +15,12 @@ class User extends React.Component{
         this.setState({chatPeople})
         console.log(chatPeople)
       }
-      fetch("http://localhost:3000/chats")
+      fetch("https://lets-chat-flatiron.herokuapp.com/chats")
       .then(res=> res.json())
       .then(data => {
       let abc = data.filter(user => user.name === this.state.chatPeople)
       if (abc.length === 0 ){
-        fetch("http://localhost:3000/chats",{
+        fetch("https://lets-chat-flatiron.herokuapp.com/chats",{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -55,9 +55,9 @@ class User extends React.Component{
 render(){
   const {name , online_status} = this.props.user
     return (
-      <div onClick={this.sendUserInfo}>
-        <p>Name: {name}</p>
-        <p>Online?: {online_status ? "online" : "offline"}</p>
+      <div onClick={this.sendUserInfo} className="user" >
+        <div>Name: {name}</div>
+        <div>Online status?: {online_status ? "online" : "offline"}</div>
       </div>
     )
   }

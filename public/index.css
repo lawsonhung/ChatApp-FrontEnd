@@ -1,0 +1,109 @@
+body {
+  background-image: url("background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  font-family: "Lucida Sans Unicode", sans-serif;
+}
+
+/************* Registration Pages **************/
+
+.linkUL, .registration {
+  text-align: center;
+}
+
+.registration {
+  font-size: 5em;
+  font-style: oblique;
+  font-family: "Arial", serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.registration:hover {
+  cursor: default;
+}
+
+.linkUL {
+  padding: 0;
+}
+
+.linkLI {
+  background-color: #00CB00;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 3em;
+  text-decoration: none;
+  opacity: 0.8;
+  border-radius: 25px;
+  border: 2px solid #FFFFFF;
+  box-shadow: 10px 10px 8px #000000;
+  display: inline-block;
+}
+
+.link:visited {
+  text-decoration: none;
+}
+
+/************* Registration Pages Ends *****************/
+
+/************** Login and Signup Pages ******************/
+
+input {
+  border-radius: 25px;
+  border: 1px solid #000000;
+  box-shadow: 8px 8px 8px #000000;
+  display: flex;
+  text-align: center;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+/************** Login and Signup Pages End ******************/
+
+/*************** Users Pages *******************/
+
+.user {
+  background-color: #00CB00;
+  color: #FFFFFF;
+  margin: 0 0.2em 0 0.2em;
+  border: 2px solid #FFFFFF;
+  border-radius: 25px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000000;
+  padding: 1em 0;
+}
+
+.allUsers {
+  display: flex;
+}
+
+.allUsers:hover {
+  cursor: pointer;
+}
+
+/*************** Users Pages End *******************/
+
+/*************** Chatroom *******************/
+
+.chatroom {
+  background-color: #00CB00;
+  padding: 0.5em;
+  border: 2px solid #FFFFFF;
+  margin-top: 1em;
+  border-radius: 25px;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.chatroom input {
+  margin: 0.5em;
+  display: inline;
+  padding: 0.5em;
+  text-align: left;
+}
+
+/*************** Chatroom End *******************/
