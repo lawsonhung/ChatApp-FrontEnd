@@ -15,12 +15,12 @@ class User extends React.Component{
         this.setState({chatPeople})
         console.log(chatPeople)
       }
-      fetch("http://localhost:3000/chats")
+      fetch("https://lets-chat-flatiron.herokuapp.com/chats")
       .then(res=> res.json())
       .then(data => {
       let abc = data.filter(user => user.name === this.state.chatPeople)
       if (abc.length === 0 ){
-        fetch("http://localhost:3000/chats",{
+        fetch("https://lets-chat-flatiron.herokuapp.com/chats",{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

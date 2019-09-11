@@ -12,7 +12,7 @@ class LoginPage extends Component {
   handleLoginSubmit = (e) => {
     e.preventDefault()
 
-    fetch('http://localhost:3000/users')
+    fetch('https://lets-chat-flatiron.herokuapp.com/users')
     .then(res=>res.json())
     .then(users=> {
       // Changed from filter to find due to undefined showing up if multiple instances with same username

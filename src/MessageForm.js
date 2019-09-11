@@ -1,4 +1,5 @@
 import React from 'react';
+
 class MessageForm extends React.Component{
 state = {
   message: ""
@@ -10,12 +11,12 @@ handleMessageChange = (e) => {
 
 handleMessageSubmit = (e) => {
   e.preventDefault()
-  e.target.reset()
+
   console.log("localStorage.id: ", localStorage.id);
   console.log("this.state.message: ", this.state.message);
   console.log("this.props.chatID: ", this.props.chatid);
 
-  fetch('http://localhost:3000/chat_boxes', {
+  fetch('https://lets-chat-flatiron.herokuapp.com/chat_boxes', {
     method: "POST",
     headers: {
       'Content-Type': "application/json",
