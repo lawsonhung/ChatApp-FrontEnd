@@ -1,5 +1,5 @@
 import React from 'react';
-import User from './User'
+import User from './user'
 
 class Users extends React.Component{
 
@@ -31,9 +31,9 @@ logout = () => {
 
 render(){
     return (
-      <div>
+      <div className="allUsers">
       <button onClick={this.logout}>Log Out</button>
-      <p>Logged in as: {localStorage.name}</p>
+      <div className="user" >Logged in as: {localStorage.name}</div>
         {this.users()}
       </div>
     )
