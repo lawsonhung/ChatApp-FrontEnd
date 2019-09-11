@@ -18,6 +18,9 @@ class LoginPage extends Component {
       // Changed from filter to find due to undefined showing up if multiple instances with same username
       // Returns first instance found
       let currentUser = users.find(user => user.name === this.state.username)
+      console.log(currentUser)
+      console.log(!!currentUser)
+      if (!!currentUser){
       if (currentUser.length === 0){
         console.log("it doesnt exit");
       }
@@ -43,6 +46,10 @@ class LoginPage extends Component {
             })
           })
       }
+    }
+    else(
+      this.props.history.push('/HomePage')
+    )
     })
 
   }

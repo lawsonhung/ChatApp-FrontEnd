@@ -24,21 +24,11 @@ body {
 .registration:hover {
   cursor: default;
 }
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 .registrationForm {
   text-align: center;
   background-color: blue;
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 .linkUL {
   padding: 0;
 }
@@ -65,37 +55,23 @@ body {
 
 /************** Login and Signup Pages ******************/
 
-<<<<<<< HEAD
 input, button {
-=======
-<<<<<<< HEAD
-input, button {
-=======
-input {
->>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
   border-radius: 25px;
   border: 1px solid #000000;
   box-shadow: 8px 8px 8px #000000;
   display: flex;
   text-align: center;
-<<<<<<< HEAD
   margin: 1em;
 }
 
 input:hover, button {
-=======
-<<<<<<< HEAD
   margin: 1em;
 }
 
 input:hover, button {
-=======
 }
 
 input:hover {
->>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
   cursor: pointer;
 }
 
@@ -103,10 +79,6 @@ input:hover {
 
 /*************** Users Pages *******************/
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 .flipCard {
   border: 1px solid #f1f1f1;
   perspective: 1000px;
@@ -123,17 +95,8 @@ input:hover {
 }
 
 
-<<<<<<< HEAD
 .user {
-  background-color: #808080;
-=======
-.user {
-  background-color: #808080;
-=======
-.user {
-  background-color: #00CB00;
->>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
+  background-color: #00CB00
   color: #FFFFFF;
   margin: 0 0.2em 0 0.2em;
   border: 2px solid #FFFFFF;
@@ -141,10 +104,6 @@ input:hover {
   text-align: center;
   text-shadow: 1px 1px 1px #000000;
   padding: 1em 0;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
   box-shadow: 8px 8px 8px #000000;
   opacity: 0.8;
 }
@@ -153,11 +112,6 @@ input:hover {
   display: flex;
   padding: 1em 0.5em 1em 0.5em;
   margin: 1em 0.5em 1em 1em;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 }
 
 .allUsers {
@@ -170,10 +124,6 @@ input:hover {
 
 /*************** Users Pages End *******************/
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 /************** Online Users *****************/
 
 .onlineUsers {
@@ -191,25 +141,16 @@ input:hover {
 
 /************** Online Users *****************/
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 /*************** Chatroom *******************/
 
 .chatroom {
-  background-color: #00CB00;
+  background-color: transparent;
   padding: 0.5em;
   border: 2px solid #FFFFFF;
   margin-top: 1em;
   border-radius: 25px;
   text-shadow: 1px 1px 1px #000000;
-<<<<<<< HEAD
-  box-shadow: 8px 8px 8px #000000;
   opacity: 0.9;
-=======
-<<<<<<< HEAD
   box-shadow: 8px 8px 8px #000000;
   opacity: 0.9;
 }
@@ -224,24 +165,152 @@ input:hover {
 .submit {
   display: inline;
   padding: 0.5em 1em 0.5em 0.5em;
-=======
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 }
 
 .chatroom input:not([type="submit"]) {
   margin: 0.5em;
   display: inline;
   text-align: left;
-<<<<<<< HEAD
   padding: 0.5em 50em 0.5em 1em;
 }
 
 .submit {
   display: inline;
   padding: 0.5em 1em 0.5em 0.5em;
-=======
->>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
->>>>>>> dd2aac82e6702e94adbe97e3987939af715bcd6d
 }
+
 
 /*************** Chatroom End *******************/
+
+
+/*************** Each Message start *******************/
+
+/*
+    .receiver {
+      width: 120px;
+      height: 80px;
+      background: yellow;
+      position: relative;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+    .receiver:before {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 26px;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-right: 26px solid red;
+      border-bottom: 7px solid transparent;
+    } */
+/* .sender {
+  text-align: right;
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.message-sender-receiver {
+	font-family: "Helvetica Neue";
+	font-size: 20px;
+	font-weight: normal;
+  max-width: 450px;
+	margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sender-receiver{
+  max-width: 255px;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+  position:relative;
+	padding:10px 20px;
+  border-radius:25px;
+
+  &:before, &:after {
+    content:"";
+		position:absolute;
+    bottom:-2px;
+    height:20px;
+  }
+}
+
+.sender {
+	color:white;
+	background:#0B93F6;
+	align-self: flex-end;
+
+	&:before {
+		right:-7px;
+		border-right:20px solid #0B93F6;
+		border-bottom-left-radius: 16px 14px;
+		transform:translate(0, -2px);
+	}
+
+	&:after {
+		right:-56px;
+		width:26px;
+		background:white;
+		border-bottom-left-radius: 10px;
+		transform:translate(-30px, -2px);
+	}
+}
+.receiver {
+	background:#E5E5EA;
+	color:black;
+
+	&:before {
+		left:-7px;
+		border-left:20px solid #E5E5EA;
+		border-bottom-right-radius: 16px 14px;
+		transform:translate(0, -2px);
+	}
+
+	&:after {
+		left:4px;
+		width:26px;
+		background:white;
+		border-bottom-right-radius: 10px;
+		transform:translate(-30px, -2px);
+	}
+}
+
+
+
+
+
+input[type=text] {
+    padding:5px;
+    border:2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
