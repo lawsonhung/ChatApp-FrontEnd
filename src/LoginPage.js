@@ -24,11 +24,23 @@ class LoginPage extends Component {
       }
       else{
         this.props.history.push('/users')
-        console.log(currentUser.name)
-        localStorage.name = currentUser.name
-        localStorage.id = currentUser.id
+
+        console.log(currentUser[0].name)
+        localStorage.name = currentUser[0].name
+        localStorage.id = currentUser[0].id
+        fetch(`https://lets-chat-flatiron.herokuapp.com/users/${localStorage.id}`,{
+          method: 'PATCH',
+          headers: {
+            'Content-Type': "application/json",
+            'Accept': 'application/json'
+          },
+            body:JSON.stringify({
+            online_status: true
+            })
+          })
       }
     })
+
   }
 
 
@@ -36,9 +48,10 @@ class LoginPage extends Component {
   render() {
     return (
       <div>
-        <h1>Log in please!</h1>
+        <h1 className="registration">Log in please!</h1>
         <form onSubmit={this.handleLoginSubmit}>
           <input onChange={this.handleChange} value={this.state.username} type="text" name="username"/>
+          {"\n"}
           <input type="submit" value="Log in"/>
         </form>
       </div>

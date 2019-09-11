@@ -2,13 +2,19 @@ import React from 'react';
 import MessageForm from './MessageForm'
 
 class Messages extends React.Component{
-
-  render(){
+renderMessage = () => {
+  return this.props.messages.map(mes => <EachMessage
+    message={mes}
+    key= {mes.id}
+    />)
+}
 
     return (
-      <div>
-        <p>Start talking to {this.props.chatPerson.name}!</p>
-        <MessageForm chatid={this.props.chatid} />
+
+      <div className="chatroom" >
+        You are chatting with: {this.props.chatPerson.name}
+        {this.renderMessage()}
+        <MessageForm chatid = {this.props.chatid}/>
       </div>
     )
   }

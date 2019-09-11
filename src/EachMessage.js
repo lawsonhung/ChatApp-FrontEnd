@@ -3,7 +3,7 @@ class EachMessage extends React.Component{
 
 render(){
     return (
-      <div >
+      <div className={this.props.message.user_id === parseInt(localStorage.id)? "sender" : "receiver" } >
       {this.props.message.message}
       </div>
     )
