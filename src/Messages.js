@@ -8,7 +8,7 @@ renderMessage = () => {
   return this.props.messages.map(mes => <EachMessage
     message={mes}
     key= {mes.id}
-    /> )
+    />)
 }
 
 render(){
