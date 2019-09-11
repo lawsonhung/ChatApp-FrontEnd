@@ -17,8 +17,8 @@ users = () => {
 render(){
     return (
       <div className="allUsers">
-      <div className="user" >Logged in as: {localStorage.name}</div>
-        {this.users()}
+        <div className="user" >Logged in as: {localStorage.name}</div>
+          {this.users()}
       </div>
     )
   }
