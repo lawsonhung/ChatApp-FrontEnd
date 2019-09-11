@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import SignUpPage from './SignUpPage';
 import LoginPage from './LoginPage';
 import Messages from './Messages';
+import Chatroom from './Chatroom'
 
 import { Switch, Route} from 'react-router-dom'
 
@@ -19,7 +20,6 @@ state = {
 }
 
 componentDidMount() {
-
   setInterval(()=>{
     fetch("https://lets-chat-flatiron.herokuapp.com/users")
     .then(res => res.json())
@@ -58,6 +58,7 @@ chatid = (id) => {
 }
 
 render(){
+
     return (
       <Switch>
         <Route path={'/signup'} component={SignUpPage} />
