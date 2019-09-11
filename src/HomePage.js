@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 class HomePage extends Component {
   render () {
     return (
-      <div>
-        Hi, Im  the HomePage!
-        <ul>
-        <li><Link to="/login">Go to Login</Link></li>
-        <li><Link to="/signup">Go to Signup</Link></li>
+      <div className="registrationPages">
+        <p className="registration" >Log in or sign up!</p>
+        <ul className="linkUL">
+        <li className="linkLI"><Link className="link" to="/login">Go to Login</Link></li>
+        <li className="linkLI"><Link className="link" to="/signup">Go to Signup</Link></li>
         </ul>
       </div>
     );

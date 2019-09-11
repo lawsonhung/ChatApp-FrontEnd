@@ -25,11 +25,14 @@ body {
   cursor: default;
 }
 
+<<<<<<< HEAD
 .registrationForm {
   text-align: center;
   background-color: blue;
 }
 
+=======
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
 .linkUL {
   padding: 0;
 }
@@ -56,16 +59,26 @@ body {
 
 /************** Login and Signup Pages ******************/
 
+<<<<<<< HEAD
 input, button {
+=======
+input {
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
   border-radius: 25px;
   border: 1px solid #000000;
   box-shadow: 8px 8px 8px #000000;
   display: flex;
   text-align: center;
+<<<<<<< HEAD
   margin: 1em;
 }
 
 input:hover, button {
+=======
+}
+
+input:hover {
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
   cursor: pointer;
 }
 
@@ -73,6 +86,7 @@ input:hover, button {
 
 /*************** Users Pages *******************/
 
+<<<<<<< HEAD
 .flipCard {
   border: 1px solid #f1f1f1;
   perspective: 1000px;
@@ -91,6 +105,10 @@ input:hover, button {
 
 .user {
   background-color: #808080;
+=======
+.user {
+  background-color: #00CB00;
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
   color: #FFFFFF;
   margin: 0 0.2em 0 0.2em;
   border: 2px solid #FFFFFF;
@@ -98,6 +116,7 @@ input:hover, button {
   text-align: center;
   text-shadow: 1px 1px 1px #000000;
   padding: 1em 0;
+<<<<<<< HEAD
   box-shadow: 8px 8px 8px #000000;
   opacity: 0.8;
 }
@@ -106,6 +125,8 @@ input:hover, button {
   display: flex;
   padding: 1em 0.5em 1em 0.5em;
   margin: 1em 0.5em 1em 1em;
+=======
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
 }
 
 .allUsers {
@@ -118,6 +139,7 @@ input:hover, button {
 
 /*************** Users Pages End *******************/
 
+<<<<<<< HEAD
 /************** Online Users *****************/
 
 .onlineUsers {
@@ -135,6 +157,8 @@ input:hover, button {
 
 /************** Online Users *****************/
 
+=======
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
 /*************** Chatroom *******************/
 
 .chatroom {
@@ -144,6 +168,7 @@ input:hover, button {
   margin-top: 1em;
   border-radius: 25px;
   text-shadow: 1px 1px 1px #000000;
+<<<<<<< HEAD
   box-shadow: 8px 8px 8px #000000;
   opacity: 0.9;
 }
@@ -158,6 +183,15 @@ input:hover, button {
 .submit {
   display: inline;
   padding: 0.5em 1em 0.5em 0.5em;
+=======
+}
+
+.chatroom input {
+  margin: 0.5em;
+  display: inline;
+  padding: 0.5em;
+  text-align: left;
+>>>>>>> 559e5d5fbcf5e1936f910dce02ae1788952865e1
 }
 
 /*************** Chatroom End *******************/

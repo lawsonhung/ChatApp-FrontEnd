@@ -55,10 +55,18 @@ class User extends React.Component{
 render(){
   const {name , online_status} = this.props.user
     return (
-      <div onClick={this.sendUserInfo}>
-        <p>Name: {name}</p>
-        <p>Online?: {online_status ? "online" : "offline"}</p>
+    <div>
+      <div className="user" >
+        <div>Name: {name}</div>
+        <div>Online status?: {online_status ? "online" : "offline"}</div>
       </div>
+
+      <div className="OnlineUsers">
+          {online_status && name !== localStorage.name ?
+            <div onClick={this.sendUserInfo} > Name: {name} is online ........ </div>: null
+          }
+      </div>
+    </div>
     )
   }
 

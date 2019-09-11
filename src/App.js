@@ -20,9 +20,11 @@ state = {
 }
 
 componentDidMount() {
-  fetch("https://lets-chat-flatiron.herokuapp.com/users")
+  setInterval(()=>{
+    fetch("https://lets-chat-flatiron.herokuapp.com/users")
     .then(res => res.json())
     .then(users => this.setState({ users }))
+  }, 1000)
 
    setInterval(()=>{
      fetch("https://lets-chat-flatiron.herokuapp.com/chat_boxes")
@@ -32,19 +34,8 @@ componentDidMount() {
     }
 
 chatWithThisUser = (user) => {
-  this.setState(
-    {chatPerson: user, chatroomExists: true}
-  )
-}
-
-toggleChatRoom = () => {
-  if (this.state.chatroomExists) {
-    return(
-      <div>
-        <Chatroom chatWithUser={this.props.user} />
-      </div>
-    )
-  }
+  this.setState({chatPerson: user})
+  // this.setState({userMessages: []})
 }
 
 chatid = (id) => {
@@ -53,7 +44,7 @@ chatid = (id) => {
   console.log(this.state.chatPerson.id)
   setInterval(()=>{
   this.setState({userMessages: []})
-    this.state.allmessages.map(message => {
+  this.state.allmessages.map(message => {
       if(
         (message.user_id === parseInt(localStorage.id) && id === message.chat_id)
         ||
