@@ -14,8 +14,18 @@ users = () => {
    )
 }
 logout = () => {
-  localStorage.name = null
-  localStorage.id = null
+  fetch(`https://lets-chat-flatiron.herokuapp.com/users/${localStorage.id}`,{
+    method: 'PATCH',
+    headers: {
+      'Content-Type': "application/json",
+      'Accept': 'application/json'
+    },
+    body:JSON.stringify({
+      online_status: false
+    })
+  })
+    localStorage.name = null
+    localStorage.id = null
   this.props.history.push('/')
 }
 

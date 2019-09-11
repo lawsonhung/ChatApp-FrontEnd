@@ -57,7 +57,7 @@ render(){
     return (
       <div onClick={this.sendUserInfo}>
         <p>Name: {name}</p>
-        <p>Online?: {online_status ? "online" : "offline"}</p>
+        <p>Online Status: {online_status? "online" : "offline"}</p>
       </div>
     )
   }
