@@ -32,7 +32,7 @@ handleMessageSubmit = (e) => {
 
 render(){
     return (
-      <div>
+      <div className="message-form-div">
         <form onSubmit={this.handleMessageSubmit}>
           <input onChange={this.handleMessageChange} type="text" name="new message"/>
           <input type="submit" value="Send" className="submit"/>
