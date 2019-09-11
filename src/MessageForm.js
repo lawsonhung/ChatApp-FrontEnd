@@ -10,7 +10,7 @@ handleMessageChange = (e) => {
 
 handleMessageSubmit = (e) => {
   e.preventDefault()
-
+  e.target.reset()
   console.log("localStorage.id: ", localStorage.id);
   console.log("this.state.message: ", this.state.message);
   console.log("this.props.chatID: ", this.props.chatid);

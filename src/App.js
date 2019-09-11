@@ -23,9 +23,11 @@ componentDidMount() {
     .then(res => res.json())
     .then(users => this.setState({ users }))
 
-  fetch("http://localhost:3000/chat_boxes")
-    .then(res=> res.json())
-    .then(allmessages =>this.setState({ allmessages }))
+   setInterval(()=>{
+     fetch("http://localhost:3000/chat_boxes")
+     .then(res=> res.json())
+     .then(allmessages => {this.setState({ allmessages }) })
+   }, 1000)
     }
 
 chatWithThisUser = (user) => {
@@ -34,9 +36,12 @@ chatWithThisUser = (user) => {
 
 chatid = (id) => {
   this.setState({chatid: id})
+  console.log(id);
+  console.log(this.state.chatPerson.id)
+  setInterval(()=>{
   this.setState({userMessages: []})
-  this.state.allmessages.map(message => {
-    if(
+    this.state.allmessages.map(message => {
+      if(
         (message.user_id === parseInt(localStorage.id) && id === message.chat_id)
         ||
         (message.user_id === this.state.chatPerson.id && id === message.chat_id)
@@ -44,7 +49,8 @@ chatid = (id) => {
       {
         this.setState({ userMessages: [...this.state.userMessages , message]})
       }
-  })
+    })
+  } , 1000)
 }
 
 render(){
