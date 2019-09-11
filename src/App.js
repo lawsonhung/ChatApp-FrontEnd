@@ -14,15 +14,20 @@ class App extends React.Component{
 state = {
   users: [],
   chatPerson: {},
-  chatroomExists: false,
-  chatid: null
+  chatid: null,
+  allmessages: [],
+  userMessages: []
 }
 
 componentDidMount() {
   fetch("http://localhost:3000/users")
     .then(res => res.json())
     .then(users => this.setState({ users }))
-}
+
+  fetch("http://localhost:3000/chat_boxes")
+    .then(res=> res.json())
+    .then(allmessages =>this.setState({ allmessages }))
+    }
 
 chatWithThisUser = (user) => {
   this.setState(
@@ -39,8 +44,20 @@ toggleChatRoom = () => {
     )
   }
 }
+
 chatid = (id) => {
   this.setState({chatid: id})
+  this.setState({userMessages: []})
+  this.state.allmessages.map(message => {
+    if(
+        (message.user_id === parseInt(localStorage.id) && id === message.chat_id)
+        ||
+        (message.user_id === this.state.chatPerson.id && id === message.chat_id)
+      )
+      {
+        this.setState({ userMessages: [...this.state.userMessages , message]})
+      }
+  })
 }
 
 render(){
@@ -59,7 +76,8 @@ render(){
 
               <Messages {...routerProps}
                chatPerson={this.state.chatPerson}
-               chatid={this.state.chatid}/>
+               chatid={this.state.chatid}
+               messages={this.state.userMessages}/>
             </div>
             }
             />

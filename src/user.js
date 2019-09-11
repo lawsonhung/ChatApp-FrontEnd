@@ -39,7 +39,7 @@ class User extends React.Component{
         this.props.chatid(abc[0].id)
       }
 
-      })
+    })
   }
 
 
