@@ -193,6 +193,23 @@ input:hover, button {
 }
 
 
+.chatroom input:not([type="submit"]) {
+  margin: 0.5em;
+  display: inline;
+  text-align: left;
+  padding: 0.5em 50em 0.5em 1em;
+}
+
+.submit {
+  display: inline;
+  padding: 0.5em 1em 0.5em 0.5em;
+}
+
+.submit:hover {
+  background-color: #00CB00;
+  transition: 0.4s;
+}
+
 /*************** Chatroom End *******************/
 
 
@@ -218,7 +235,11 @@ input:hover, button {
 }
 
 .sender {
+<<<<<<< HEAD
 	color: #FFFFFF;
+=======
+	color: white;
+>>>>>>> 1a7a1e33268b4c52ea91ce49d8c2d92041defad3
 	background: #0B93F6;
 	align-self: flex-end;
   border-radius: 25px;
