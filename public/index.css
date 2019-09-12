@@ -235,11 +235,7 @@ input:hover, button {
 }
 
 .sender {
-<<<<<<< HEAD
 	color: #FFFFFF;
-=======
-	color: white;
->>>>>>> 1a7a1e33268b4c52ea91ce49d8c2d92041defad3
 	background: #0B93F6;
 	align-self: flex-end;
   border-radius: 25px;
@@ -258,40 +254,41 @@ input:hover, button {
 /*************** EachMessage Ends ************/
 
 /************** Submit button *********************/
- input[type="text"]{
- align-items: center;
- display: inline-block;
- width: 500px;
- height: 40px;
- box-sizing: border-box;
- outline: none;
- border: 1px solid #A9A9A9;
- border-radius: 3px;
- padding: 10px 10px 10px 100px;
- transition: all 0.1s ease-out;
- box-shadow: 5px 5px 5px #FFFFFF;
- }
+input[type="text"]{
+  align-items: center;
+  display: inline-block;
+  width: 500px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #A9A9A9;
+  border-radius: 3px;
+  padding: 10px 10px 10px 100px;
+  transition: all 0.1s ease-out;
+  box-shadow: 5px 5px 5px #FFFFFF;
+  font-size: 1em;
+  transition: 0.3s;
+}
 
- input[type="text"]:focus{
- padding: 10px;
- width: 70%;
- transition: all 0.3s ease-in;
- }
+input[type="text"]:focus{
+  padding: 10px;
+  width: 70%;
+  transition: all 0.3s ease-in;
+}
 
- input[type="submit"] {
-   border:2px solid orange;
-   text-shadow: 2px 2px 2px #FFFFFF;
-   padding:5px 20px;
-   font-size:30px;
-   background:repeating-linear-gradient(to right,#00CB00 0,#00CB00 4px,#00CB00 4px, #00CB00 8px) center/0px 100%  no-repeat;
-   transition:0.2s all linear;
-   align-items: center;
- }
- input[type="submit"]:hover {
-   background-size:100% 100%;
- }
+input[type="submit"] {
+  border:2px solid orange;
+  text-shadow: 2px 2px 2px #FFFFFF;
+  padding:5px 20px;
+  font-size:30px;
+  background:repeating-linear-gradient(to right,#00CB00 0,#00CB00 4px,#00CB00 4px, #00CB00 8px) center/0px 100%  no-repeat;
+  transition:0.2s all linear;
+  align-items: center;
+}
+input[type="submit"]:hover {
+  background-size:100% 100%;
+}
 
- .submit {
-   box-shadow: 5px 5px 5px #FFFFFF;
- }
+.submit {
+  box-shadow: 5px 5px 5px #FFFFFF;
+}
  /************** Submit button ends *********************/
