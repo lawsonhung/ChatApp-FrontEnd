@@ -180,7 +180,7 @@ input:hover, button {
 .submit {
   display: inline;
   padding: 0.5em 1em 0.5em 0.5em;
-
+}
 .submit:hover {
   background-color: #00CB00;
   transition: 0.4s;
@@ -231,20 +231,9 @@ input:hover, button {
 /*************** EachMessage Ends ************/
 
 
-
-/* .message-form-div{
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- height: 100vh;
- font-family: Montserrat;
- background: #fff1f0;
-} */
-
 .message-form-div{
  flex-direction: column;
- justify-content: center;
+ /* justify-content: center; */
  align-items: center;
  position: relative;
  margin-top: 50px;
