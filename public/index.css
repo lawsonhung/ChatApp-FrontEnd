@@ -26,7 +26,7 @@ body {
 }
 
 .registrationForm {
-  text-align: center;
+text-align: center;
  background-color: transparent;
 }
 
@@ -79,13 +79,13 @@ input:hover, button {
 /*************** Users Pages *******************/
 
 .flipCard {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #F1F1F1;
   perspective: 1000px;
 }
 
 .flipCardInner {
   text-align: center;
-  transition: 0.4s;
+  transition: 0.3s;
   transform-style: preserve-3d;
 }
 
@@ -94,7 +94,7 @@ input:hover, button {
 }
 
 .user {
-  background-color: #00CB00;
+  background-color: grey;
   color: #FFFFFF;
   margin: 0 0.2em 0 0.2em;
   border: 2px solid #FFFFFF;
@@ -104,6 +104,7 @@ input:hover, button {
   padding: 1em 0;
   box-shadow: 8px 8px 8px #000000;
   opacity: 0.8;
+  height:5em;
 }
 
 .logoutButton {
@@ -112,10 +113,16 @@ input:hover, button {
   margin: 1em 0.5em 1em 1em;
   background-color: orange;
   color: #FFFFFF;
+  width: 40%;
+  text-align: center;
+  transition: 0.5s;
 }
 
 .logoutButton:hover {
   cursor: pointer;
+  background-color: #FF0000;
+  width: 80%;
+  transition: 0.5s;
 }
 
 .allUsers {
@@ -147,14 +154,19 @@ input:hover, button {
 
 /*************** Chatroom *******************/
 
+.chattingWithUserMsg {
+  text-shadow: 5px 5px 4px #000000;
+  text-align: center;
+  font-size: 2em;
+}
+
 .chatroom {
-  background-color: transparent;
   padding: 0.5em;
   border: 2px solid #FFFFFF;
   margin-top: 1em;
   border-radius: 25px;
   text-shadow: 1px 1px 1px #000000;
-  box-shadow: 8px 8px 8px #000000;
+  box-shadow: 8px 8px 8px #FFFFFF;
   opacity: 0.8;
 }
 
@@ -169,6 +181,7 @@ input:hover, button {
   display: inline;
   padding: 0.5em 1em 0.5em 0.5em;
 }
+
 
 .chatroom input:not([type="submit"]) {
   margin: 0.5em;
@@ -186,7 +199,6 @@ input:hover, button {
   background-color: #00CB00;
   transition: 0.4s;
 }
-
 
 /*************** Chatroom End *******************/
 
@@ -227,6 +239,7 @@ input:hover, button {
 	color:black;
   border-radius: 25px;
   box-shadow: 8px 8px 8px #000000;
+  text-shadow: 1px 1px 1px #F1F1F1;
 }
 
 
@@ -250,9 +263,9 @@ input:hover, button {
  align-items: center;
  position: relative;
  margin-top: 50px;
- font-family: Montserrat;
+ font-family: "Montserrat";
 }
-
+/************** Submit button *********************/
  input[type="text"]{
  align-items: center;
  display: inline-block;
@@ -266,41 +279,26 @@ input:hover, button {
  transition: all 0.1s ease-out;
  }
 
- input[type="text"] + label{
- position: absolute;
- top: 0;
- left: 0;
- bottom: 0;
- height: 40px;
- line-height: 40px;
- color: white;
- border-radius: 3px 0 0 3px;
- padding: 0 20px;
- background: #fa8072;
- transform: translateZ(0) translateX(0);
- transition: all 0.3s ease-in;
- transition-delay: 0.2s;
- }
-
- input[type="text"]:focus + label{
- transform: translateY(-120%) translateX(0%);
- border-radius: 3px;
- transition: all 0.1s ease-out;
- }
-
  input[type="text"]:focus{
  padding: 10px;
- transition: all 0.3s ease-out;
- transition-delay: 0.2s;
+ width: 70%;
+ transition: all 0.3s ease-in;
  }
 
  input[type="submit"] {
-   border:2px solid yellow;
+   border:2px solid orange;
+   text-shadow: 2px 2px 2px #FFFFFF;
    padding:5px 20px;
    font-size:30px;
-   background:repeating-linear-gradient(to right,#0B93F6 0,#E5E5EA 4px,transparent 4px, transparent 8px) center/0px 100%  no-repeat;
-   transition:0.5s all linear;
+   background:repeating-linear-gradient(to right,#00CB00 0,#00CB00 4px,#00CB00 4px, #00CB00 8px) center/0px 100%  no-repeat;
+   transition:0.2s all linear;
+   align-items: center;
  }
  input[type="submit"]:hover {
    background-size:100% 100%;
  }
+
+ .submit {
+   box-shadow: 5px 5px 5px #FFFFFF;
+ }
+ /************** Submit button ends *********************/
