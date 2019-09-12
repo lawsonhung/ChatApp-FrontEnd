@@ -45,39 +45,28 @@ class User extends React.Component{
     })
   }
 
+
   sendUserInfo = () => {
     this.props.chatWithThisUser(this.props.user);
     this.sendChatInfo()
   }
 
-  // toggleUserCard = (name , online_status) => {
-  //   if (online_status) {
-  //     if (online_status && name !== localStorage.name) {
-  //       return (
-  //         <div onClick={this.sendUserInfo} className="onlineUsers" > Name: {name} is online ........ </div>: null
-  //       )}
-  //   } else {
-  //     return (
-  //       <div>Name: {name}</div>
-          // <div>{online_status ? "online" : "offline"}</div>
-  //
-  //     )
-  //   }
-  // }
-
 
 render(){
   const {name , online_status} = this.props.user
     return (
-      <div className="flipCard">
-        <div className="flipCardInner" >
-          {online_status && name !== localStorage.name ?
-            (<div onClick={this.sendUserInfo} className="user onlineUsers" > {name} is online </div>)
-            :
-            (<div className="user">Name: {name} is offline</div>)
-          }
-        </div>
+    <div>
+      <div className="user" >
+        <div>Name: {name}</div>
+        <div>Online status?: {online_status ? "online" : "offline"}</div>
       </div>
+
+      <div className="OnlineUsers">
+          {online_status && name !== localStorage.name ?
+            <div onClick={this.sendUserInfo} > Name: {name} is online ........ </div>: null
+          }
+      </div>
+    </div>
     )
   }
 
