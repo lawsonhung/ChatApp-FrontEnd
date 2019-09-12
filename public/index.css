@@ -107,6 +107,11 @@ input:hover, button {
   height:5em;
 }
 
+.offlineUsers:focus {
+  background-color: orange;
+  /* transition: 0.5s; */
+}
+
 .logoutButton {
   display: flex;
   padding: 1em 0.5em 1em 0.5em;
@@ -131,6 +136,10 @@ input:hover, button {
 
 .allUsers:hover {
   cursor: pointer;
+}
+
+.loggedInUser:hover {
+  cursor: default;
 }
 
 /*************** Users Pages End *******************/
@@ -158,6 +167,7 @@ input:hover, button {
   text-shadow: 5px 5px 4px #000000;
   text-align: center;
   font-size: 2em;
+  cursor: default;
 }
 
 .chatroom {
@@ -191,7 +201,6 @@ input:hover, button {
 .message-sender-receiver {
 	font-family: "Helvetica Neue";
 	font-size: 20px;
-	font-weight: normal;
   max-width: 70vw;
 	margin: 1em auto;
   display: flex;
@@ -203,51 +212,30 @@ input:hover, button {
   word-wrap: break-word;
   margin-bottom: 12px;
   line-height: 24px;
-  position: relative;
 	padding: 0.25em;
   border-radius: 25px;
 
 }
 
 .sender {
-	color:white;
-	background:#0B93F6;
+	color: #FFFFFF;
+	background: #0B93F6;
 	align-self: flex-end;
   border-radius: 25px;
   box-shadow: 8px 8px 8px #000000;
+  width: 50vw;
 }
+
 .receiver {
-	background:#E5E5EA;
-	color:black;
+	background: #E5E5EA;
+	color: black;
   border-radius: 25px;
   box-shadow: 8px 8px 8px #000000;
   text-shadow: 1px 1px 1px #F1F1F1;
+  width: 50vw;
 }
-
-
 /*************** EachMessage Ends ************/
 
-
-
-/* .message-form-div{
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- height: 100vh;
- font-family: Montserrat;
- background: #fff1f0;
-} */
-
-.message-form-div{
- flex-direction: column;
- justify-content: center;
- align-items: center;
- position: relative;
- margin-top: 50px;
- font-family: "Montserrat";
-
-}
 /************** Submit button *********************/
  input[type="text"]{
  align-items: center;
@@ -256,10 +244,11 @@ input:hover, button {
  height: 40px;
  box-sizing: border-box;
  outline: none;
- border: 1px solid lightgray;
+ border: 1px solid #A9A9A9;
  border-radius: 3px;
  padding: 10px 10px 10px 100px;
  transition: all 0.1s ease-out;
+ box-shadow: 5px 5px 5px #FFFFFF;
  }
 
  input[type="text"]:focus{

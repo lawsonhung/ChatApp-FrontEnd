@@ -32,7 +32,7 @@ logout = () => {
 render(){
     return (
       <div className="allUsers">
-        <div className="user" >Logged in as: {localStorage.name}
+        <div className="user loggedInUser" >Logged in as: {localStorage.name}
           <button onClick={this.logout} className="logoutButton">Log Out</button>
         </div>
           {this.users()}

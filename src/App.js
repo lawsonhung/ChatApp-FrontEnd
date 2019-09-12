@@ -53,7 +53,7 @@ chatid = (id) => {
         this.setState({ userMessages: [...this.state.userMessages , message]})
       }
     })
-  } , 1000)
+  } ,500)
 
 }
 
