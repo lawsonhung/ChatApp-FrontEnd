@@ -74,7 +74,7 @@ render(){
           {online_status && name !== localStorage.name ?
             (<div onClick={this.sendUserInfo} className="user onlineUsers" > {name} is online </div>)
             :
-            (<div className="user offlineUsers">{name} is offline</div>)
+            name !== localStorage.name? (<div className="user">Name: {name} is offline</div>) : null
           }
         </div>
       </div>
