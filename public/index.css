@@ -269,6 +269,10 @@ input[type="text"]{
   transition: 0.3s;
 }
 
+input:hover[type="text"]{
+  background-color: #0B93F6;
+}
+
 input[type="text"]:focus{
   padding: 10px;
   width: 70%;
