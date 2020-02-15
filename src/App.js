@@ -44,9 +44,9 @@ chatid = (id) => {
   this.setState({userMessages: []})
   this.state.allmessages.map(message => {
       if(
-        (message.user_id === parseInt(localStorage.id) && id === message.chat_id)
+        (message.user_id === parseInt(localStorage.id) && this.state.chatid === message.chat_id)
         ||
-        (message.user_id === this.state.chatPerson.id && id === message.chat_id)
+        (message.user_id === this.state.chatPerson.id && this.state.chatid === message.chat_id)
       )
       {
         console.log(message.chat_id)
