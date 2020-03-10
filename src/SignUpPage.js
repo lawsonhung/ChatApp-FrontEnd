@@ -39,7 +39,7 @@ class SignUpPage extends Component {
     return (
       <div>
         <h1 className="registration" >Make an account!</h1>
-        <h1 className="registration">Just type in your name or make up a username. No password needed.</h1>
+        <h3 className="registration">Just type in your name or make up a username. No password needed.</h3>
         <form onSubmit={this.handleSignupSubmit}>
           <input onChange={this.handleChange} value={this.state.username} type="text" name="username"/>
           <input type="submit" value="Sign up!"/>
