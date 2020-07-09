@@ -54,12 +54,15 @@ class LoginPage extends Component {
 
   }
 
-
+  componentDidMount() {
+    alert('Dummy data to log in: Log in with the name "Lawson".')
+  }
 
   render() {
     return (
       <div>
         <h1 className="registration">Log in please!</h1>
+        <h1 className='registration'>Dummy log in: Lawson</h1>
         <form onSubmit={this.handleLoginSubmit} className="registrationForm" >
           <input onChange={this.handleChange} value={this.state.username} type="text" name="username"/>
           {"\n"}
