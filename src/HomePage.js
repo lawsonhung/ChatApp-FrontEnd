@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
 class HomePage extends Component {
+  componentDidMount() {
+    alert('Dummy data to log in: Log in with the name "Lawson".')
+  }
+
   render () {
     return (
       <div className="registrationPages">
