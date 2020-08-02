@@ -1,3 +1,5 @@
+# Let's Chat
+
 An app for talking to friends.
 
 Backend: https://github.com/lawsonhung/ChatApp-BackEnd
