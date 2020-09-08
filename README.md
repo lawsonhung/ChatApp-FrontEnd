@@ -2,6 +2,8 @@
 
 An app for talking to friends.
 
+Project: http://angry-cabbage.surge.sh/
+
 Backend: https://github.com/lawsonhung/ChatApp-BackEnd
 
 Demo: https://youtu.be/fzxA1PBSZeU
