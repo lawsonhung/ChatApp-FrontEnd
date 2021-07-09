@@ -8,6 +8,8 @@ Backend: https://github.com/lawsonhung/ChatApp-BackEnd
 
 Demo: https://youtu.be/fzxA1PBSZeU
 
+Credits: learn.co
+
 To run on your computer locally, in the project directory, you can run:
 
 ### `npm start`
